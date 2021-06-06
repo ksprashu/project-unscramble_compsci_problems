@@ -25,10 +25,11 @@ for call in calls:
     call_duration[call[0]] = call_duration.get(call[0], 0) + int(call[3])
     call_duration[call[1]] = call_duration.get(call[1], 0) + int(call[3])
 
-call_duration_sorted = sorted(
-    call_duration, key=lambda k: call_duration[k], reverse=True)
+# call_duration_sorted = sorted(
+#     call_duration, key=lambda k: call_duration[k], reverse=True)
+longest_call = max(call_duration, key=lambda k: call_duration[k])
 print('{} spent the longest time, {} seconds, on the phone during September 2016.'.format(
-    call_duration_sorted[0], call_duration[call_duration_sorted[0]]))
+    longest_call, call_duration[longest_call]))
 
 # Time Complexity for solution
 #
@@ -43,11 +44,16 @@ print('{} spent the longest time, {} seconds, on the phone during September 2016
 # runtime = n * log(n)
 # Note: worst case we can assume that there are no duplicates,
 # hence all the numbers are in the dictionary
+#
+# Based on code review, updated longest_call to use max() in order to reduce
+# time complexity from n.log(n) to n.
 # 
+# (new) runtime = n
+#
 # Look-up happens in constant time
 # runtime = 2
 #
-# total runtime = n.log(n) + 2.n + 2
+# total runtime = 3.n + 2
 # We can ignore the lower order terms
 #
-# Ans: Worst Case Runtime = O(n.log(n))
+# Ans: Worst Case Runtime = O(n)
