@@ -20,3 +20,34 @@ Print a message:
 September 2016.".
 """
 
+call_duration = dict()
+for call in calls:
+    call_duration[call[0]] = call_duration.get(call[0], 0) + int(call[3])
+    call_duration[call[1]] = call_duration.get(call[1], 0) + int(call[3])
+
+call_duration_sorted = sorted(
+    call_duration, key=lambda k: call_duration[k], reverse=True)
+print('{} spent the longest time, {} seconds, on the phone during September 2016.'.format(
+    call_duration_sorted[0], call_duration[call_duration_sorted[0]]))
+
+# Time Complexity for solution
+#
+# The list is scanned through once
+# runtime = n
+#
+# The dict is scanned for every item in the list and an insert is done
+# This happens in constant time in the dictionary, but is done n times
+# runtime = 2 * n
+#
+# Sorting is an n * log(n) operation in best case (python implements timsort)
+# runtime = n * log(n)
+# Note: worst case we can assume that there are no duplicates,
+# hence all the numbers are in the dictionary
+# 
+# Look-up happens in constant time
+# runtime = 2
+#
+# total runtime = n.log(n) + 2.n + 2
+# We can ignore the lower order terms
+#
+# Ans: Worst Case Runtime = O(n.log(n))
