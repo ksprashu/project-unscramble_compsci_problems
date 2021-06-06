@@ -51,10 +51,10 @@ for call in calls:
     if '(080)' in call[0]:
         bangalore_calls.append(call)
 
-# 2. Get the area codes of the receiver based on starting character
+# 2. Get the area codes of the receiver based on starting character(s)
 receiver_area_codes = set()
 for call in bangalore_calls:
-    if call[1][0] == '(':
+    if call[1][0:2] == '(0': # code review: area code also starts with 0
         end_index = call[1].index(')')
         receiver_area_codes.add(call[1][1:end_index])
     elif call[1][0] in '789':

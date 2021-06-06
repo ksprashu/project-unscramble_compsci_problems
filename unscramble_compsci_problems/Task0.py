@@ -21,7 +21,7 @@ Print messages:
 """
 print("First record of texts, {} texts {} at time {}".format(*texts[0]))
 print("Last record of calls, {} calls {} at time {}, lasting {} seconds".format(
-    *calls[-1]))
+    *calls[-1])) # code review: use unpacking for better readability
 
 # Time Complexity for solution
 #
