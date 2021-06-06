@@ -1,0 +1,88 @@
+Task 0
+------
+
+First records and last records are accessed by their index
+In Python 'Get Item' on a list has constant runtime
+runtime = 7 * 1
+
+Ans: Worst Case Runtime = O(1)
+
+
+Task 1
+------
+
+Both lists of texts and calls are scanned through once
+runtime = 2 * n
+
+Adding a number to the set is in constant time
+However this happens n times
+runtime = 4 * n
+
+Get Length has a constant runtime = 1
+total runtime = 6 * n + 1
+
+Ans: Worst Case Runtime = O(n)
+
+
+Task 2
+------
+
+The list is scanned through once
+runtime = n
+
+The dict is scanned for every item in the list and an insert is done
+This happens in constant time in the dictionary, but is done n times
+runtime = 2 * n
+
+Sorting is an n * log(n) operation in best case (python implements timsort)
+runtime = n * log(n)
+Note: worst case we can assume that there are no duplicates,
+hence all the numbers are in the dictionary, so length is n
+
+Look-up happens in constant time
+runtime = 2
+
+total runtime = n.log(n) + 2.n + 2
+We can ignore the lower order terms
+
+Ans: Worst Case Runtime = O(n.log(n))
+
+
+Task 3
+------
+
+1. List is scanned once and appended into another list
+runtime = n
+
+2. New list is scanned once and inserted into a set
+runtime = n
+
+3. List is sorted (n.log(n)) and then scanned through to print
+runtime = n.log(n) + n
+
+4. List is scanned through and appended into a list
+runtime = n
+
+total runtime = n.log(n) + 4.n
+we can drop 4.n for very large values of n
+
+Ans: Worst Case Runtime = O(n.log(n))
+
+
+Task 4
+------
+
+1. List is scanned 4 times and appended into another list
+runtime = 4.n
+
+2. Set Difference is computed 3 times and then sorted
+Runtime for set difference is O(len(s))
+runtime = n.log(n) + 3.n
+
+List is scanned through to print
+runtime = n
+
+total runtime = n.log(n) + 8.n
+we can drop 8.n for very large values of n
+
+Ans: Worst Case Runtime = O(n.log(n))
