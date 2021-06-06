@@ -75,7 +75,7 @@ for call in bangalore_calls:
         to_bangalore_calls.append(call)
 
 print("\n{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(
-    len(to_bangalore_calls) / len(bangalore_calls)))
+    len(to_bangalore_calls)  * 100 / len(bangalore_calls)))
 
 # Time Complexity for solution
 #
