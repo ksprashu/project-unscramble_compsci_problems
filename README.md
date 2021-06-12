@@ -1,6 +1,6 @@
-# Udacity - Data Structures &amp; Algorithms Nanodegree Program
+# Project #1 - Udacity Nanodegree - Data Structures and Algorithms
 
-This repo contains all the exercises and projects that I am working on as part of this course.
+This repo contains projects that I am working on as part of this course.
 
 Please note that these solutions have been written by me as part of my learning.
 
