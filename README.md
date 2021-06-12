@@ -1,6 +1,5 @@
 # Project #1 - Unscramble Computer Science Problems
 ## Udacity Nanodegree - Data Structures and Algorithms
-##
 
 This repo contains projects that I am working on as part of this course.
 
